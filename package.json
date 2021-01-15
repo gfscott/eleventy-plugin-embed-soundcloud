@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "bent": "^7.3.11",
-    "parse-path": "^4.0.2"
+    "parse-path": "^4.0.3"
   }
 }
