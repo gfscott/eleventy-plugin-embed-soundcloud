@@ -28,15 +28,15 @@ const expectedSetOutput_sm =
  * For the three supported URL types, check that the plugin produces
  * the expected markup
  */
-test(`Artist URL`, async (t) => {
+test("Artist URL", async (t) => {
 	let out = await getEmbed(artistUrl, pluginDefaults);
 	t.is(out, expectedArtistOutput);
 });
-test(`Track URL`, async (t) => {
+test("Track URL", async (t) => {
 	let out = await getEmbed(trackUrl, pluginDefaults);
 	t.is(out, expectedTrackOutput);
 });
-test(`Set URL`, async (t) => {
+test("Set URL", async (t) => {
 	let out = await getEmbed(setUrl, pluginDefaults);
 	t.is(out, expectedSetOutput);
 });
@@ -45,15 +45,15 @@ test(`Set URL`, async (t) => {
  * For the three supported URL types, check that the plugin produces
  * the expected markup with the "small" embed type specified
  */
-test(`Artist URL, small version`, async (t) => {
+test("Artist URL, small version", async (t) => {
 	let out = await getEmbed(artistUrl, smallPlayer);
 	t.is(out, expectedArtistOutput_sm);
 });
-test(`Track URL, small version`, async (t) => {
+test("Track URL, small version", async (t) => {
 	let out = await getEmbed(trackUrl, smallPlayer);
 	t.is(out, expectedTrackOutput_sm);
 });
-test(`Set URL, small version`, async (t) => {
+test("Set URL, small version", async (t) => {
 	let out = await getEmbed(setUrl, smallPlayer);
 	t.is(out, expectedSetOutput_sm);
 });
@@ -61,7 +61,7 @@ test(`Set URL, small version`, async (t) => {
 /**
  * On request failure, return the URL unchanged
  */
-test(`oEmbed fetch failure`, async (t) => {
+test("oEmbed fetch failure", async (t) => {
 	let out = await getEmbed(badUrl, pluginDefaults);
 	t.is(out, badUrl);
 });
