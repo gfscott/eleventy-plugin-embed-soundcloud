@@ -10,7 +10,9 @@
   ],
   "main": ".eleventy.js",
   "scripts": {
-    "test": "npx ava"
+    "test": "npx ava",
+    "format": "npx rome format .",
+    "format:write": "npx rome format . --write"
   },
   "ava": {
     "files": [
