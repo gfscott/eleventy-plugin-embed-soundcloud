@@ -19,7 +19,7 @@ jobs:
       - name: Run tests using ava
         run: npx nyc --reporter=lcov ava
       - name: Check code style and formatting with rome
-        run: npx rome ci .
+        run: npx rome ci .eleventy lib/
       - name: Upload coverage to Codecov.io
         uses: codecov/codecov-action@v3
       
