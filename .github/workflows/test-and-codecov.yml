@@ -14,10 +14,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+      - name: Install project dependencies
+        run: npm ci
       - name: Run tests using ava
-        run: |
-          npm ci
-          npx nyc --reporter=lcov ava
+        run: npx nyc --reporter=lcov ava
+      - name: Check code style and formatting with rome
+        run: npx rome ci .
       - name: Upload coverage to Codecov.io
         uses: codecov/codecov-action@v3
       
