@@ -30,7 +30,7 @@
   },
   "bugs": "https://github.com/gfscott/eleventy-plugin-embed-soundcloud/issues",
   "devDependencies": {
-    "ava": "^5.1.0"
+    "ava": "^5.1.1"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^3.0.0"
